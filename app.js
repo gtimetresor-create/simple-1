@@ -1,6 +1,7 @@
 // REPLACE THESE WITH YOUR THINGSPEAK DETAILS
-const CHANNEL_ID = "YOUR_CHANNEL_ID"; 
-const READ_API_KEY = "YOUR_READ_API_KEY"; // Leave empty "" if channel is Public
+const CHANNEL_ID = "3576966"; // Must be your actual numeric Channel ID (no letters)
+const READ_API_KEY = "FCPTY591ETT4EI4K"; // Required if your channel is Private
+ 
 
 const URL = `https://thingspeak.com{CHANNEL_ID}/feeds/last.json?api_key=${READ_API_KEY}`;
 
