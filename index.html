@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Water Tank Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>Water Tank Telemetry</h1>
+      <span id="connection-status" class="badge">Connecting...</span>
+    </header>
+
+    <div class="grid">
+      <!-- Visual Water Tank Card -->
+      <div class="card tank-card">
+        <h2>Tank Level</h2>
+        <div class="tank-container">
+          <div id="water-fill" class="water-fill" style="height: 0%;"></div>
+          <span id="level-text" class="level-text">--%</span>
+        </div>
+      </div>
+
+      <!-- Status Indicators Card -->
+      <div class="card status-card">
+        <h2>System Status</h2>
+        
+        <div class="status-item">
+          <span>Water Pump:</span>
+          <strong id="pump-status" class="status-pill off">--</strong>
+        </div>
+
+        <div class="status-item">
+          <span>Level Alert:</span>
+          <strong id="level-alert" class="status-pill">--</strong>
+        </div>
+
+        <div class="status-item">
+          <span>Overflow Alarm:</span>
+          <strong id="alarm-status" class="status-pill off">NORMAL</strong>
+        </div>
+
+        <p class="timestamp">Last Updated: <span id="last-updated">Never</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
